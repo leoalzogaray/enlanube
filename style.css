@@ -7,9 +7,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la pantalla */
+  display: flex;
 }
-
 .intro {
   text-align: center;
   margin-top: 50px;
@@ -23,12 +23,7 @@ body {
   font-family: 'Source Code Pro', monospace; /* Aplica la fuente */
   font-size: 3vw;
 }
-.h1class {
-  font-family: 'Source Code Pro', monospace; /* Aplica la fuente */
-  font-size: 3vw;
-  color: #00ffcc;
-  margin-top: 20px;
-}
+
 @keyframes typing {
   from {
 	width: 0;
@@ -143,7 +138,7 @@ header {
   top: 0;
   z-index: 100;
   background-color: #f5f5f5;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .menu ul {
@@ -221,6 +216,7 @@ footer {
   align-items: center;
   gap: 1.5rem; /* O el valor que te guste */
 }
+/* Logs */
 #logs {
   background-color: #f9f9f9;
   padding: 4rem 1rem;
@@ -228,35 +224,32 @@ footer {
 }
 
 #logs h2 {
-  color: #4e54c8;
+  color: #333;
   margin-bottom: 2rem;
   font-size: 2.2rem;
 }
 
 .timeline {
-  max-width: 700px;
-  margin: 0 auto;
-  border-left: 3px solid #87CEEB;
-  padding-left: 2rem;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaciado entre los elementos */
 }
 
 .log-item {
-  margin-bottom: 2rem;
-  position: relative;
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  gap: 10px; /* Espaciado entre la fecha y el texto */
 }
 
 .log-fecha {
   font-weight: bold;
-  color: #87CEEB;
-  position: absolute;
-  left: -3rem;
-  top: 0;
-  width: 6rem;
-  text-align: right;
+  color: #00ffcc; /* Color destacado para la fecha */
+  flex-shrink: 0; /* Evita que la fecha se reduzca */
 }
-.log-item {
-  color: #222; /* texto visible sobre fondo claro */
+.log-item p {
+  margin: 0; /* Elimina márgenes innecesarios */
+  flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+  color: #333; /* Color del texto */
 }
 .scroll-up {
   position: fixed;
@@ -273,12 +266,54 @@ footer {
   transition: background 0.3s, transform 0.3s;
   z-index: 999;
 }
-
 .scroll-up:hover {
   background: #00BFFF;
   transform: translateY(-3px);
 }
+.log-container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .log-fecha {
+    position: static;
+    text-align: left;
+    margin-left: 0;
+  }
+}
+.nota {
+  font-style: italic;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.contact-info {
+  margin-top: 20px;
+  margin-bottom: 20px; /* Ajusta según lo que necesites */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
 
-
-
-
+.redes {
+  flex-grow: 1; /* Expande el contenedor para separar el footer */
+  display: flex;
+  flex-direction: column; /* Organiza los enlaces en vertical */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: #87CEEB; /* Color de la línea */
+  margin: 20px 0; /* Espaciado arriba y abajo */
+}

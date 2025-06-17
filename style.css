@@ -317,3 +317,21 @@ hr {
   background-color: #87CEEB; /* Color de la línea */
   margin: 20px 0; /* Espaciado arriba y abajo */
 }
+.redes {
+  display: flex;
+  flex-direction: row; /* Alternativamente 'row' si querés en línea */
+  align-items: center;
+  gap: 15px; /* Espacio entre los botones */
+  padding: 20px;
+}
+.redes {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+  justify-content: center;
+  gap: 10px;
+}
+.boton-contacto {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}

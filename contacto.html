@@ -30,7 +30,8 @@
     <a href="index.html" class="scroll-up">↑</a>
     <main>
     <section id="contacto">
-        <h2>Contacto</h2>
+      <br>  
+      <h2>Contacto</h2>
         <p>¿Querés charlar sobre código, ideas o colaboraciones? Estoy a un clic 👇</p>
         
         <div class="redes">
@@ -38,9 +39,21 @@
           <a href="https://linkedin.com/in/leonardoalzogaray" target="_blank" class="boton-contacto">LinkedIn</a>
           <a href="mailto:leonardo@leonardoalzogaray.com" class="boton-contacto">Email</a>
         </div>
+        <button onclick="cambiarFondoContacto()" style="display: block; margin: 20px auto;">Cambiar fondo</button>
+      <br>
       </section>
-    </main>  
+    </main> 
+<script>
+  function cambiarFondoContacto() {
+    const colores = ["#f39c12", "#16a085", "#8e44ad", "#2980b9", "#e84393"];
+    const indice = Math.floor(Math.random() * colores.length);
+    const seccionContacto = document.getElementById("contacto");
+    seccionContacto.style.backgroundColor = colores[indice];
+            seccionContacto.style.color = "#ffffff";
+  }
+  </script> 
     </body>
+    <br>
              <footer>
           <p class="contact-info">Creado con ❤️ por Leonardo Alzogaray desde Uruguay &copy; 2025</p>
       </footer>

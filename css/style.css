@@ -1,0 +1,230 @@
+/* Variables: Acá controlás todo el sitio */
+:root {
+    --color-fondo: #ffffff;
+    --color-texto: #2d3436;
+    --color-acento: #0984e3; /* Azul profesional */
+    --color-gris-suave: #f5f6fa;
+    --fuente-titulos: 'Georgia', serif; /* Elegancia clásica para cine */
+    --fuente-cuerpo: 'Segoe UI', Tahoma, Helvetica, sans-serif; /* Claridad técnica */
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor centralizado */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Estilo de los artículos */
+.post-header h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.post-meta {
+    color: #636e72;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--color-acento);
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.featured-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.intro-box {
+    background-color: var(--color-gris-suave);
+    padding: 30px;
+    border-radius: 8px;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+.navbar {
+    background-color: var(--color-fondo);
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    position: sticky; /* Se queda fija arriba al scrollear */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-texto);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--color-acento); /* Ese azul pro que elegimos */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-acento);
+}
+
+/* Ajuste para que el contenido no quede pegado a la navbar */
+.container {
+    padding-top: 60px;
+}
+/* Esto quita los puntos y pone los links en fila */
+.nav-links {
+    list-style: none; /* Quita los puntos negros */
+    display: flex;    /* Pone los elementos en fila */
+    gap: 20px;        /* Separa los links entre sí */
+    margin: 0;
+    padding: 0;
+}
+
+/* Esto quita el subrayado azul clásico y les da estilo pro */
+.nav-links a, .logo {
+    text-decoration: none;
+    color: #2d3436; /* Un gris casi negro, más elegante */
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+/* Para que el logo y el menú estén en la misma línea */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Manda el logo a la izquierda y el menú a la derecha */
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+/* Contenedor del cuerpo del post */
+.post-body {
+    max-width: 750px; /* Un poco más angosto que el header para mejor lectura */
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+/* Caja de intro con el borde azul de acento */
+.personal-intro {
+    border-left: 4px solid var(--color-acento);
+    padding-left: 25px;
+    margin: 40px 0;
+    font-style: italic;
+    color: #444;
+}
+
+.article-text h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    margin-top: 40px;
+    color: #1a1a1a;
+}
+
+/* La cita de Hedy */
+.fancy-quote {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 50px 0;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.fancy-quote span {
+    display: block;
+    font-size: 0.9rem;
+    font-family: var(--fuente-cuerpo);
+    text-transform: uppercase;
+    margin-top: 15px;
+    color: #7f8c8d;
+    letter-spacing: 2px;
+}
+
+/* Lista técnica */
+.tech-highlights {
+    background: #f9f9f9;
+    padding: 30px 40px;
+    border-radius: 8px;
+    list-style: none;
+}
+
+.tech-highlights li {
+    margin-bottom: 15px;
+}
+
+.tech-highlights li strong {
+    color: var(--color-acento);
+}
+
+.post-footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    font-weight: bold;
+}
+/* Ajustamos la altura de la imagen en la card */
+.card-image img {
+    width: 100%;
+    height: 160px; /* Bajamos de 200px a 160px para que sea más sutil */
+    object-fit: cover; /* Esto evita que la imagen se deforme */
+    transition: transform 0.5s ease;
+}
+
+/* Reducimos el padding del contenido para que la card sea más compacta */
+.card-content {
+    padding: 15px 20px;
+}
+
+/* Hacemos que el título de la card sea un poco más pequeño */
+.card-content h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    margin: 10px 0;
+    line-height: 1.3;
+}
+
+/* Opcional: un efecto de zoom suave cuando pasas el mouse */
+.article-card:hover .card-image img {
+    transform: scale(1.05);
+}

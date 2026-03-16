@@ -228,3 +228,48 @@ body {
 .article-card:hover .card-image img {
     transform: scale(1.05);
 }
+/* Ajustamos la altura de la imagen en la card */
+.card-image img {
+    width: 100%;
+    height: 160px; /* Bajamos de 200px a 160px para que sea más sutil */
+    object-fit: cover; /* Esto evita que la imagen se deforme */
+    transition: transform 0.5s ease;
+}
+
+/* Reducimos el padding del contenido para que la card sea más compacta */
+.card-content {
+    padding: 15px 20px;
+}
+
+/* Hacemos que el título de la card sea un poco más pequeño */
+.card-content h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    margin: 10px 0;
+    line-height: 1.3;
+}
+
+/* Opcional: un efecto de zoom suave cuando pasas el mouse */
+.article-card:hover .card-image img {
+    transform: scale(1.05);
+}
+/* Corrección de compatibilidad para el Bot */
+#lt-chat-window {
+    line-height: normal !important; /* Resetea el 1.8 del body */
+    text-align: left !important;
+}
+
+#lt-chat-window * {
+    box-sizing: border-box !important;
+}
+
+#lt-chat-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Evita que el contenedor principal lo oculte */
+#lt-chat-hidden {
+    display: none !important;
+}

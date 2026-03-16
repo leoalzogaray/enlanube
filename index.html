@@ -20,6 +20,23 @@
         </div>
     </nav>
 
+    <div id="lt-chat-widget" style="position: fixed !important; top: 90px !important; right: 25px !important; z-index: 999999 !important;">
+        <button id="lt-chat-button" onclick="toggleLTChat()" style="background: #000; color: #fff; border: none; border-radius: 50%; width: 55px; height: 55px; cursor: pointer; font-size: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; outline: none;">
+            💬
+        </button>
+
+        <div id="lt-chat-window" style="position: absolute; top: 65px; right: 0; width: 300px; height: 400px; background: white; border: 1px solid #eee; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); display: none; flex-direction: column; overflow: hidden;">
+            <div style="background: #000; color: #fff; padding: 15px; font-family: 'Playfair Display', serif; font-weight: bold;">LEONARDO.tech Assistant</div>
+            <div id="lt-chat-messages" style="flex: 1; padding: 15px; overflow-y: auto; font-family: 'Inter', sans-serif; font-size: 14px; background: #fafafa; color: #333;">
+                <p><strong>Asistente:</strong> ¡Hola, Leonardo! Ahora estoy aquí arriba. ¿Qué analizamos hoy?</p>
+            </div>
+            <div style="padding: 10px; border-top: 1px solid #eee; display: flex; background: #fff;">
+                <input type="text" id="lt-user-input" style="flex: 1; border: 1px solid #ddd; padding: 8px; border-radius: 4px; font-family: 'Inter', sans-serif;" placeholder="Escribí aquí..." onkeypress="if(event.key==='Enter') sendLTMessages()">
+                <button onclick="sendLTMessages()" style="background: #000; color: #fff; border: none; padding: 8px 12px; margin-left: 5px; border-radius: 4px; cursor: pointer; font-family: 'Inter', sans-serif;">Enviar</button>
+            </div>
+        </div>
+    </div>
+
     <header class="container" style="margin-top: 60px; text-align: center;">
         <span class="post-meta" style="letter-spacing: 3px;">DESDE 1993</span>
         <h1 style="font-size: 3.5rem; margin: 20px 0;">Análisis, Cine e Innovación.</h1>
@@ -53,7 +70,7 @@
                 <a href="articulos.html" style="color: var(--color-acento); font-weight: bold; text-decoration: none;">Ver todo →</a>
             </div>
             
-            <div class="articles-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <div class="articles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
                 <article class="article-card">
                     <div class="card-content">
                         <span class="card-tag">Homenaje</span>
@@ -79,9 +96,36 @@
         </section>
     </main>
 
-    <footer class="post-footer" style="margin-top: 100px; padding-bottom: 40px;">
+    <footer class="post-footer" style="margin-top: 100px; padding-bottom: 40px; text-align: center; border-top: 1px solid #eee;">
         <p>© 2026 LEONARDO.tech - Montevideo, Uruguay</p>
     </footer>
 
+    <script>
+        function toggleLTChat() {
+            const win = document.getElementById('lt-chat-window');
+            if (win.style.display === 'none' || win.style.display === '') {
+                win.style.display = 'flex';
+            } else {
+                win.style.display = 'none';
+            }
+        }
+
+        function sendLTMessages() {
+            const input = document.getElementById('lt-user-input');
+            const msgs = document.getElementById('lt-chat-messages');
+            if (input.value.trim() !== "") {
+                msgs.innerHTML += `<div style="text-align:right; margin-bottom: 10px;"><p><strong>Tú:</strong> ${input.value}</p></div>`;
+                
+                const currentText = input.value;
+                input.value = "";
+                msgs.scrollTop = msgs.scrollHeight;
+
+                setTimeout(() => {
+                    msgs.innerHTML += `<div style="margin-bottom: 10px;"><p><strong>Asistente:</strong> Estoy procesando tu consulta sobre "${currentText}"...</p></div>`;
+                    msgs.scrollTop = msgs.scrollHeight;
+                }, 600);
+            }
+        }
+    </script>
 </body>
 </html>

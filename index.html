@@ -10,26 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-gx/bootstrap.js?v=1"></script>
-    <df-messenger
-        location="global"
-        project-id="leonardo-tech-452115" 
-        agent-id="1773699977235"
-        language-code="es"
-        chat-title="LEONARDO.tech Assistant">
-    </df-messenger>
+ <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-gx/bootstrap.js?v=1"></script>
+<df-messenger
+    location="us-central1"
+    project-id="bitacora-leo-2026"
+    agent-id="genai-app-leonardoalzogarayassistan-1-17737993532"
+    language-code="es">
+    <df-messenger-chat-bubble
+        chat-title="Leonardo Alzogaray Assistant">
+    </df-messenger-chat-bubble>
+</df-messenger>
 
 <style>
     df-messenger {
-        display: block !important;
-        position: fixed !important;
-        bottom: 30px !important;
-        right: 30px !important;
-        z-index: 9999999 !important;
-        width: 350px !important; /* Forzamos el ancho */
-        height: 500px !important; /* Forzamos el alto */
-        --df-messenger-button-titlebar-color: #000000;
-        --df-messenger-send-icon: #000000;
+        z-index: 999999;
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        --df-messenger-button-titlebar-color: #1e293b;
     }
 </style>
 

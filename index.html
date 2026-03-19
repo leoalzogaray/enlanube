@@ -10,8 +10,11 @@
         :root {
             --primary: #0f172a; /* Azul muy oscuro profesional */
             --accent: #3b82f6;  /* Azul brillante tecnológico */
+            --accent-hover: #2563eb;
             --text: #f8fafc;
+            --text-muted: #94a3b8;
             --bg: #020617;
+            --card-bg: #0f172a;
         }
 
         body {
@@ -30,15 +33,81 @@
             align-items: center;
             text-align: center;
             background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+            padding: 0 1rem;
         }
 
-        h1 { font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: -2px; }
-        p.subtitle { font-size: 1.2rem; color: var(--accent); font-weight: 300; }
+        h1 { font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 0.5rem; letter-spacing: -2px; }
+        p.subtitle { font-size: 1.2rem; color: var(--accent); font-weight: 300; max-width: 600px; }
 
-        .container { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
         
-        section { margin-bottom: 4rem; }
-        h2 { border-left: 4px solid var(--accent); padding-left: 1rem; font-size: 1.8rem; }
+        section { margin-bottom: 5rem; }
+        h2 { border-left: 4px solid var(--accent); padding-left: 1rem; font-size: 1.8rem; margin-bottom: 2rem; }
+
+        /* Estilos de Grilla y Tarjetas para Artículos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Estilos de Contacto */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        input, textarea {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+
+        .btn-submit {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover { background: var(--accent-hover); }
 
         /* Estilo para el botón del Bot */
         #searchWidgetTrigger {
@@ -59,7 +128,7 @@
 
         #searchWidgetTrigger:hover { transform: scale(1.05); }
 
-        footer { text-align: center; padding: 2rem; font-size: 0.8rem; opacity: 0.6; }
+        footer { text-align: center; padding: 4rem 2rem; font-size: 0.8rem; opacity: 0.6; border-top: 1px solid #1e293b; }
     </style>
 </head>
 <body>
@@ -68,23 +137,143 @@
         <h1>leonardoalzogaray.com</h1>
         <p class="subtitle">Analista Funcional • Especialista en Gestión • Entusiasta de IA</p>
         <p class="subtitle" style="color: var(--text-muted); font-size: 1rem; margin-top: 1rem;">
-        Desde 1993 observando la evolución tecnológica. Formado en UCUDAL y especializado en agilidad en UCU Business School</p>
+            Desde 1993 observando la evolución tecnológica. Formado en la UCUDAL y especializado en agilidad en la UCU Business School.
+        </p>
     </header>
 
     <div class="container">
         <section id="sobre-mi">
-            <h2>Trayectoria</h2>
-            <p>En el mundo informático desde 1993. Especialista en análisis funcional y gestión de proyectos, con formación en la UCU Business School y foco actual en soluciones de Inteligencia Artificial para el sector público.</p>
+            <h2>Trayectoria Profesional</h2>
+            <p>Especialista en análisis funcional y gestión de proyectos con más de 30 años en el sector IT. Actualmente desempeñándome en el Ministerio de Transporte y Obras Públicas (MTOP), enfocado en la mejora de procesos mediante metodologías ágiles (Scrum) y la integración de soluciones basadas en Inteligencia Artificial Generativa.</p>
         </section>
 
-        <section id="proyectos">
-            <h2>Bitácora Técnica</h2>
-            <p>Explorando la agilidad con Scrum, Certificaciones Microsoft PL-900 y la implementación de Agentes GenAI.</p>
+        <section id="articulos">
+            <h2>Artículos & Bitácora</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="tag">INGENIERÍA & ANÁLISIS</span>
+                    <h3>Adrian Newey: El hombre que dibuja el viento</h3>
+                    <p>En un mundo donde los túneles de viento digitales y las supercomputadoras dictan cada milímetro de un monoplaza, hay un hombre que sigue confiando en su tablero de dibujo y su lápiz 2B.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">HISTORIA & INNOVACIÓN</span>
+                    <h3>Hedy Lamarr: La Belleza que Inventó el Futuro</h3>
+                    <p>Nacida como Hedwig Eva Maria Kiesler en Viena, Hedy no fue solo "la mujer más hermosa del mundo" en la gran pantalla. Fue una mujer de una curiosidad técnica insaciable.</p>
+                </div>
+                </div>
         </section>
+
+<section id="contacto">
+    <h2>Conectemos</h2>
+    <div class="card" style="max-width: 500px; margin: 0 auto;">
+        <p>¿Tenés alguna consulta técnica o profesional? Escribime directamente.</p>
+        
+        <form class="contact-form" action="https://formspree.io/f/xeervyeo" method="POST">
+            <input type="email" name="email" placeholder="Tu correo electrónico (ej: nombre@mail.com)" required>
+            
+            <textarea name="message" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
+            
+            <input type="hidden" name="_subject" value="Nuevo contacto desde leonardoalzogaray.com">
+            
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        </form>
     </div>
+</section>
 
+<section id="lectura-newey" style="padding: 4rem 0;">
+    <div class="card" style="max-width: 850px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
+        
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--accent), #60a5fa);"></div>
+
+        <header style="margin-bottom: 3rem;">
+            <span class="tag" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; letter-spacing: 1px;">INGENIERÍA & ANÁLISIS</span>
+            <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-top: 1.5rem; color: #fff; line-height: 1.1; letter-spacing: -1.5px; border: none; padding: 0;">Adrian Newey: El hombre que dibuja el viento</h2>
+        </header>
+
+        <article style="font-size: 1.15rem; color: #cbd5e1; line-height: 1.9; font-weight: 300;">
+            <p>En un mundo donde los túneles de viento digitales y las supercomputadoras dictan cada milímetro de un monoplaza, hay un hombre que sigue confiando en su tablero de dibujo y su <strong>lápiz 2B</strong>.</p>
+
+            <p>Para quienes seguimos la <strong>Fórmula 1</strong>, el nombre de Adrian Newey es sinónimo de una era dorada que se niega a morir. Mientras las escuderías invierten millones en CFD, Newey sigue trazando las líneas de sus campeones a mano.</p>
+
+            <blockquote style="margin: 3.5rem 0; padding-left: 2rem; border-left: 3px solid var(--accent); font-style: italic; font-size: 1.5rem; color: #fff; line-height: 1.4;">
+                "El tablero de dibujo me permite pensar de una manera que la pantalla no puede. Es la conexión directa entre el ojo, la mano y el flujo del aire."
+            </blockquote>
+
+            <p>Su libro, <em>"How to Build a Car"</em>, es más que una biografía técnica; es un manifiesto sobre cómo entender la física desde la intuición. Newey interpreta el flujo del aire de una manera que las máquinas todavía no logran procesar con la misma elegancia.</p>
+
+            <div style="background: rgba(59, 130, 246, 0.03); padding: 2.5rem; border-radius: 16px; margin: 3.5rem 0; border: 1px dashed rgba(59, 130, 246, 0.3);">
+                <h3 style="color: var(--accent); margin-top: 0; font-size: 1.7rem; letter-spacing: -0.5px;">La lección para el Analista</h3>
+                <p style="margin-bottom: 2rem;">Como analistas, a veces caemos en la trampa de creer que las herramientas harán el trabajo de pensar por nosotros. El verdadero valor está en el <strong>criterio funcional</strong>.</p>
+                
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">🚀</span>
+                        <span><strong>Intuición Analógica:</strong> Capacidad de ver "el todo" antes que las partes.</span>
+                    </li>
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">🔄</span>
+                        <span><strong>Evolución Constante:</strong> Adaptarse a los cambios de reglamento con creatividad.</span>
+                    </li>
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">✨</span>
+                        <span><strong>Simplicidad:</strong> Encontrar la solución más elegante a un problema complejo.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <p>Desde el Williams FW14B hasta el dominio de Red Bull, la constante es una visión humana clara que utiliza la tecnología como apoyo, pero nunca como sustituto del pensamiento crítico.</p>
+            
+            <p style="text-align: center; margin-top: 4rem; font-weight: 700; color: var(--accent); font-size: 1.3rem; letter-spacing: -0.5px;">
+                Celebrando a los Newey del mundo: los que desde 1993 saben que la mejor tecnología nace de una idea clara.
+            </p>
+        </article>
+        <section id="articulo-hedy" style="padding: 4rem 0;">
+    <div class="card" style="max-width: 850px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; border-left: 4px solid #ec4899;">
+        
+        <header style="margin-bottom: 3rem;">
+            <span class="tag" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; letter-spacing: 1px;">HISTORIA & INNOVACIÓN</span>
+            <h2 style="font-size: clamp(2rem, 5vw, 2.8rem); margin-top: 1.5rem; color: #fff; line-height: 1.1; letter-spacing: -1px; border: none; padding: 0;">Hedy Lamarr: La Belleza que Inventó el Futuro</h2>
+        </header>
+
+        <article style="font-size: 1.15rem; color: #cbd5e1; line-height: 1.9; font-weight: 300;">
+            <p>A menudo pensamos en la tecnología como algo frío, nacido exclusivamente en laboratorios. Pero si algo he aprendido desde que empecé en el mundo informático allá por el <strong>93</strong>, es que la verdadera innovación surge de conectar mundos aparentemente opuestos.</p>
+
+            <p style="background: rgba(236, 72, 153, 0.05); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(236, 72, 153, 0.1); color: #fff;">
+                🎬 <strong>Cine y Tecnología:</strong> Inauguro esta sección porque Hedy personifica mis dos grandes pasiones.
+            </p>
+
+            <p>Nacida como Hedwig Eva Maria Kiesler en Viena, Hedy no fue solo "la mujer más hermosa del mundo" en la gran pantalla. Fue una mujer de una curiosidad técnica insaciable. Mientras filmaba clásicos como <em>Sansón y Dalila</em>, su verdadera pasión ocurría en su mesa de dibujo entre toma y toma.</p>
+
+            <blockquote style="margin: 3.5rem 0; padding-left: 2rem; border-left: 3px solid #ec4899; font-style: italic; font-size: 1.4rem; color: #fff;">
+                "Cualquier chica puede ser glamorosa. Todo lo que tienes que hacer es quedarte quieta y parecer estúpida."
+            </blockquote>
+
+            <h3 style="color: #f472b6; font-size: 1.8rem; margin-top: 3rem; border: none; padding: 0;">⚙️ El Salto de Frecuencia: La base del Wi-Fi</h3>
+            <p>En 1942, junto al compositor George Antheil, patentó el <strong>"Sistema de Comunicación Secreta"</strong>. Su idea era tan brillante como simple en concepto:</p>
+
+            <ul style="list-style: none; padding: 0; margin: 2rem 0; display: grid; gap: 1rem;">
+                <li style="padding-left: 1.5rem; border-left: 2px solid rgba(236, 72, 153, 0.3);">
+                    <strong>❌ El Problema:</strong> Los torpedos teledirigidos eran fáciles de interferir mediante una sola frecuencia de radio.
+                </li>
+                <li style="padding-left: 1.5rem; border-left: 2px solid rgba(236, 72, 153, 0.3);">
+                    <strong>✅ La Solución:</strong> Un sistema que hacía que la señal "saltara" entre 88 frecuencias (como las teclas de un piano).
+                </li>
+                <li style="padding-left: 1.5rem; border-left: 2px solid rgba(236, 72, 153, 0.3);">
+                    <strong>📡 El Legado:</strong> Es el pilar fundamental del <strong>Wi-Fi, Bluetooth y redes 5G</strong> que usamos hoy.
+                </li>
+            </ul>
+
+            <p style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1e293b; font-weight: 700; color: #f472b6; font-size: 1.2rem;">
+                Hedy nos enseñó que la capacidad de análisis y la creatividad no pertenecen a mundos separados. Es esa mirada artística la que nos permite encontrar soluciones donde otros solo ven problemas.
+            </p>
+        </article>
+    </div>
+</section>
+    </div>
+</section>
     <footer>
         <p>© 2026 Leonardo Alzogaray - Montevideo, Uruguay</p>
+        <p>Analista Funcional Senior | Formación UCUDAL & UCU Business School</p>
     </footer>
 
     <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=es_419"></script>

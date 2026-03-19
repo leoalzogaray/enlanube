@@ -130,10 +130,9 @@
 
         footer { text-align: center; padding: 4rem 2rem; font-size: 0.8rem; opacity: 0.6; border-top: 1px solid #1e293b; }
     #btnVolverArriba {
-    display: none; /* Se oculta por defecto */
     position: fixed;
     bottom: 30px;
-    left: 30px; /* Lo ponemos a la izquierda porque a la derecha tenés el de la IA */
+    left: 30px;
     z-index: 999;
     background-color: var(--accent);
     color: white;
@@ -142,7 +141,10 @@
     padding: 12px;
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, background-color 0.3s;
+    /* Estas 3 líneas evitan el temblor */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s, transform 0.3s;
 }
 
 #btnVolverArriba:hover {
@@ -596,22 +598,23 @@
     <script>
     const btnArriba = document.getElementById("btnVolverArriba");
 
-    // Mostrar el botón cuando se baja 300px
-    window.onscroll = function() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            btnArriba.style.display = "block";
+    window.addEventListener('scroll', () => {
+        // Usamos 400px para dar un margen más seguro
+        if (window.scrollY > 400) {
+            btnArriba.style.opacity = "1";
+            btnArriba.style.visibility = "visible";
         } else {
-            btnArriba.style.display = "none";
+            btnArriba.style.opacity = "0";
+            btnArriba.style.visibility = "hidden";
         }
-    };
+    });
 
-    // Al hacer clic, subir suavemente
-    btnArriba.onclick = function() {
+    btnArriba.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    };
+    });
 </script>
 </body>
 </html>

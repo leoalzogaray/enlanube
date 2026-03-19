@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>leonardoalzogaray.com | Analista Funcional & IA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
         h1 { font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 0.5rem; letter-spacing: -2px; }
         p.subtitle { font-size: 1.2rem; color: var(--accent); font-weight: 300; max-width: 600px; }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
         
         section { margin-bottom: 5rem; }
         h2 { border-left: 4px solid var(--accent); padding-left: 1rem; font-size: 1.8rem; margin-bottom: 2rem; }
@@ -129,6 +129,30 @@
         #searchWidgetTrigger:hover { transform: scale(1.05); }
 
         footer { text-align: center; padding: 4rem 2rem; font-size: 0.8rem; opacity: 0.6; border-top: 1px solid #1e293b; }
+    #btnVolverArriba {
+    display: none; /* Se oculta por defecto */
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Lo ponemos a la izquierda porque a la derecha tenés el de la IA */
+    z-index: 999;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#btnVolverArriba:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-5px);
+}
+
+#btnVolverArriba svg {
+    display: block;
+}
     </style>
 </head>
 <body>
@@ -160,7 +184,27 @@
                     <h3>Hedy Lamarr: La Belleza que Inventó el Futuro</h3>
                     <p>Nacida como Hedwig Eva Maria Kiesler en Viena, Hedy no fue solo "la mujer más hermosa del mundo" en la gran pantalla. Fue una mujer de una curiosidad técnica insaciable.</p>
                 </div>
+                <div class="card">
+                    <span class="tag">INFRAESTRUCTURA & HARDWARE</span>
+                    <h3>Desafiando al hormigón: Mi transición a Wi-Fi 6 y Powerline</h3>
+                    <p>Pasar de una conexión deficiente en una casa de construcción antigua a una red de alta fidelidad para streaming no fue solo cuestión de comprar equipos nuevos. Fue un ejercicio de análisis de infraestructura y confianza en los materiales de base.</p>
                 </div>
+                <div class="card">
+                    <span class="tag">SEGURIDAD DIGITAL & REFLEXIONES</span>
+                    <h3>El mejor antivirus no se instala: se cultiva</h3>
+                    <p>Llevo en el mundo informático desde 1993. He visto pasar de todo: desde los disquetes de 5¼ que traían "regalitos" hasta la complejidad de la nube actual.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">IA & APRENDIZAJE & EDUCACIÓN DIGITAL</span>
+                    <h3>Estudiar con IA: ¿Atajo al vacío o potenciador?</h3>
+                    <p>Muchos ven a la IA como una herramienta para "zafar". Pero en mi experiencia preparando certificaciones técnicas, el enfoque correcto la convierte en el mejor tutor imaginable.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">IA & FUTURO DEL TRABAJO</span>
+                    <h3>IA: ¿El fin del Analista Funcional o su Superpoder?</h3>
+                    <p>Desde 1993 he visto muchas herramientas "revolucionarias", pero ninguna ha generado tanto ruido como la IA Generativa. Como analistas, la pregunta es inevitable: ¿nos reemplazará?</p>
+                </div>
+            </div>
         </section>
 
 <section id="contacto">
@@ -181,7 +225,7 @@
 </section>
 
 <section id="lectura-newey" style="padding: 4rem 0;">
-    <div class="card" style="max-width: 850px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
+    <div class="card" style="max-width: 1050px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
         
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--accent), #60a5fa);"></div>
 
@@ -226,9 +270,21 @@
             <p style="text-align: center; margin-top: 4rem; font-weight: 700; color: var(--accent); font-size: 1.3rem; letter-spacing: -0.5px;">
                 Celebrando a los Newey del mundo: los que desde 1993 saben que la mejor tecnología nace de una idea clara.
             </p>
+            <div style="text-align: right; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1e293b;">
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://leonardoalzogaray.com" 
+       target="_blank" 
+       style="display: inline-flex; align-items: center; gap: 10px; background: #0077b5; color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        Compartir en LinkedIn
+    </a>
+</div>
         </article>
         <section id="articulo-hedy" style="padding: 4rem 0;">
-    <div class="card" style="max-width: 850px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; border-left: 4px solid #ec4899;">
+    <div class="card" style="max-width: 1050px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; border-left: 4px solid #ec4899;">
         
         <header style="margin-bottom: 3rem;">
             <span class="tag" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; letter-spacing: 1px;">HISTORIA & INNOVACIÓN</span>
@@ -266,11 +322,262 @@
             <p style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1e293b; font-weight: 700; color: #f472b6; font-size: 1.2rem;">
                 Hedy nos enseñó que la capacidad de análisis y la creatividad no pertenecen a mundos separados. Es esa mirada artística la que nos permite encontrar soluciones donde otros solo ven problemas.
             </p>
+            <div style="text-align: right; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1e293b;">
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://leonardoalzogaray.com" 
+       target="_blank" 
+       style="display: inline-flex; align-items: center; gap: 10px; background: #0077b5; color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        Compartir en LinkedIn
+    </a>
+</div>
+        </article>
+        <section id="articulo-wifi6" style="padding: 4rem 0;">
+    <div class="card" style="max-width: 1050px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
+        
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--accent), #60a5fa);"></div>
+
+        <header style="margin-bottom: 3rem;">
+            <span class="tag" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; letter-spacing: 1px;">INFRAESTRUCTURA & HARDWARE</span>
+            <h2 style="font-size: clamp(2rem, 5vw, 2.8rem); margin-top: 1.5rem; color: #fff; line-height: 1.1; letter-spacing: -1px; border: none; padding: 0;">Desafiando al hormigón: Mi transición a Wi-Fi 6 y Powerline</h2>
+        </header>
+
+        <article style="font-size: 1.15rem; color: #cbd5e1; line-height: 1.9; font-weight: 300;">
+            <p class="lead" style="font-size: 1.3rem; color: #fff; margin-bottom: 2rem; font-weight: 400;">
+                Pasar de una conexión deficiente en una casa de construcción antigua a una red de alta fidelidad para streaming no fue solo cuestión de comprar equipos nuevos. Fue un ejercicio de <strong>análisis de infraestructura</strong> y confianza en los materiales de base.
+            </p>
+
+            <h3 style="color: #60a5fa; font-size: 1.7rem; margin-top: 3rem; border: none; padding: 0;">01. El Diagnóstico: Hardware vs. Arquitectura</h3>
+            <p>El punto de partida: Mi fiel <strong>Archer A7</strong> hacía lo que podía, pero las paredes de 30 cm de mi casa en Montevideo son la "kriptonita" de las señales inalámbricas. Como analista, sabía que "más potencia" de Wi-Fi no era la solución única frente a la atenuación física.</p>
+
+            <h3 style="color: #60a5fa; font-size: 1.7rem; margin-top: 3rem; border: none; padding: 0;">02. La Solución: Un enfoque híbrido (Aire + Cobre)</h3>
+            <p>Decidí cambiar el paradigma de distribución de datos mediante un sistema de dos capas:</p>
+            
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 2rem; border-radius: 12px; border: 1px solid #1e293b; margin: 2rem 0; font-family: monospace; font-size: 1rem; color: #94a3b8; line-height: 1.6;">
+                <span style="color: var(--accent);">// El Cerebro: TP-Link Archer AX55 (AX3000)</span><br>
+                - Tecnología Wi-Fi 6 con OFDMA.<br>
+                - Gestión optimizada de múltiples dispositivos simultáneos.<br><br>
+                
+                <span style="color: var(--accent);">// El Puente: TP-Link TL-WPA761 KIT</span><br>
+                - Tecnología Powerline (PLC).<br>
+                - Conversión de la red eléctrica en un bus de datos de alta velocidad.
+            </div>
+
+            <blockquote style="margin: 3.5rem 0; padding-left: 2rem; border-left: 3px solid var(--accent); font-style: italic; font-size: 1.5rem; color: #fff; line-height: 1.4;">
+             "El éxito de un sistema Powerline depende 100% de la calidad del cableado. Mi seguridad radicaba en la instalación realizada por mi padre, <strong>Rolando</strong>. Su rigor en el uso de materiales de alta calidad —el mismo que lo llevó a trabajar para compañías con estándares tan exigentes como <strong>Xerox</strong>— fue el que aplicó en nuestra casa. Esa 'garantía de origen' es la que hoy permite que los datos fluyan por el cobre sin ruidos ni pérdidas."
+            </blockquote>
+
+            <h3 style="color: #60a5fa; font-size: 1.7rem; margin-top: 3rem; border: none; padding: 0;">03. Lecciones para el Analista</h3>
+            <p>Como analistas, este proyecto me dejó dos conclusiones fundamentales que trascienden el hardware:</p>
+            
+            <ul style="list-style: none; padding: 0; margin: 2rem 0; display: grid; gap: 1.2rem;">
+                <li style="padding-left: 1.5rem; border-left: 2px solid rgba(59, 130, 246, 0.3); display: flex; align-items: start; gap: 10px;">
+                    <span style="color: var(--accent);">📡</span>
+                    <span><strong>Evaluar el medio:</strong> Antes de invertir en software o hardware de última generación, hay que asegurar que la <strong>capa física</strong> (paredes, cables) sea apta.</span>
+                </li>
+                <li style="padding-left: 1.5rem; border-left: 2px solid rgba(59, 130, 246, 0.3); display: flex; align-items: start; gap: 10px;">
+                    <span style="color: var(--accent);">🛠️</span>
+                    <span><strong>La calidad no prescribe:</strong> El uso de materiales nobles hace décadas permite que hoy aprovechemos tecnologías que en aquel entonces ni siquiera existían.</span>
+                </li>
+            </ul>
+
+            <p style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1e293b; font-weight: 700; color: var(--accent); font-size: 1.2rem;">
+                🔒 Nota de seguridad: Identificadores MAC e IPs anonimizados en esta documentación.
+            </p>
+            <div style="text-align: right; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1e293b;">
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://leonardoalzogaray.com" 
+       target="_blank" 
+       style="display: inline-flex; align-items: center; gap: 10px; background: #0077b5; color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        Compartir en LinkedIn
+    </a>
+</div>
+        </article>
+        <section id="articulo-seguridad" style="padding: 4rem 0;">
+    <div class="card" style="max-width: 1050px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
+        
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #06b6d4, #3b82f6);"></div>
+
+        <header style="margin-bottom: 3rem;">
+            <span class="tag" style="background: rgba(6, 182, 212, 0.15); color: #22d3ee; letter-spacing: 1px;">SEGURIDAD DIGITAL & REFLEXIONES</span>
+            <h2 style="font-size: clamp(2rem, 5vw, 2.8rem); margin-top: 1.5rem; color: #fff; line-height: 1.1; letter-spacing: -1px; border: none; padding: 0;">El mejor antivirus no se instala: se cultiva</h2>
+        </header>
+
+        <article style="font-size: 1.15rem; color: #cbd5e1; line-height: 1.9; font-weight: 300;">
+            <p class="lead" style="font-size: 1.3rem; color: #fff; margin-bottom: 2rem; font-weight: 400;">
+                Llevo en el mundo informático desde 1993. He visto pasar de todo: desde los disquetes de 5¼ que traían "regalitos" hasta la complejidad de la nube actual.
+            </p>
+
+            <p>En mi carrera, me tocó administrar consolas de antivirus corporativos para cientos de usuarios y aprendí una lección que no te enseñan en los cursos técnicos, pero que la realidad te grita a la cara:</p>
+
+            <blockquote style="margin: 3.5rem 0; padding-left: 2rem; border-left: 3px solid #06b6d4; font-style: italic; font-size: 1.5rem; color: #fff; line-height: 1.4;">
+                "El software de seguridad tiene un límite, y ese límite sos vos."
+            </blockquote>
+
+            <p>Podemos tener los servidores actualizados, las definiciones al día y las mejores herramientas del mercado. Pero hay un momento crítico, un <strong>"segundo de la verdad"</strong>, donde ninguna tecnología puede salvarte: ese instante en el que el cursor flota sobre un enlace extraño.</p>
+
+            <h3 style="color: #22d3ee; font-size: 1.7rem; margin-top: 3rem; border: none; padding: 0;">🛡️ Antes de hacer ese clic:</h3>
+            
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 2rem; border-radius: 12px; border: 1px solid #1e293b; margin: 2rem 0;">
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">❓</span>
+                        <span><strong>Duda:</strong> Si es demasiado urgente, demasiado bueno o demasiado extraño, probablemente sea una trampa.</span>
+                    </li>
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">🔍</span>
+                        <span><strong>Verifica:</strong> Mirá el remitente real, no solo el nombre que muestra la pantalla.</span>
+                    </li>
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">⏱️</span>
+                        <span><strong>Frena:</strong> Tómate 3 segundos. Los atacantes siempre juegan con tu prisa.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <p style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1e293b; font-weight: 700; color: #06b6d4; font-size: 1.3rem;">
+                La tecnología ayuda, pero la seguridad empieza y termina entre la silla y el teclado. El Criterio es tu Mejor Firewall.
+            </p>
+       <div style="text-align: right; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1e293b;">
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://leonardoalzogaray.com" 
+       target="_blank" 
+       style="display: inline-flex; align-items: center; gap: 10px; background: #0077b5; color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        Compartir en LinkedIn
+    </a>
+</div>
+        </article>
+        <section id="articulo-ia-aprendizaje" style="padding: 4rem 0;">
+    <div class="card" style="max-width: 1050px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
+        
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #a855f7, #3b82f6);"></div>
+
+        <header style="margin-bottom: 3rem;">
+            <span class="tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; letter-spacing: 1px;">IA & APRENDIZAJE & EDUCACIÓN DIGITAL</span>
+            <h2 style="font-size: clamp(2rem, 5vw, 2.8rem); margin-top: 1.5rem; color: #fff; line-height: 1.1; letter-spacing: -1px; border: none; padding: 0;">Estudiar con IA: ¿Atajo al vacío o potenciador?</h2>
+        </header>
+
+        <article style="font-size: 1.15rem; color: #cbd5e1; line-height: 1.9; font-weight: 300;">
+            <p class="lead" style="font-size: 1.3rem; color: #fff; margin-bottom: 2rem; font-weight: 400;">
+                Muchos ven a la IA como una herramienta para "zafar". Pero en mi experiencia preparando certificaciones técnicas, el enfoque correcto la convierte en el mejor tutor imaginable.
+            </p>
+
+            <h3 style="color: #c084fc; font-size: 1.7rem; margin-top: 3rem; border: none; padding: 0;">El "Efecto Espejo": Usar a Gemini como tutor</h3>
+            <p>A diferencia de buscar una respuesta directa, utilizo a la IA para <strong>cuestionar mi conocimiento</strong>. Lo que más valoro es su capacidad para generar pruebas y simulacros de examen con un formato profesional.</p>
+
+            <blockquote style="margin: 3.5rem 0; padding-left: 2rem; border-left: 3px solid #a855f7; font-style: italic; font-size: 1.5rem; color: #fff; line-height: 1.4;">
+                "La IA actúa como un interlocutor que me obliga a pensar y me saca de la zona de confort. No le pido que haga el trabajo por mí, le pido que me evalúe."
+            </blockquote>
+
+            <h3 style="color: #c084fc; font-size: 1.7rem; margin-top: 3rem; border: none; padding: 0;">NotebookLM: Mi biblioteca inteligente</h3>
+            <p>Con NotebookLM, el enfoque cambia hacia la gestión profunda del conocimiento, asegurando que las respuestas estén ancladas en fuentes fiables:</p>
+            
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 2rem; border-radius: 12px; border: 1px solid #1e293b; margin: 2rem 0;">
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">🔗</span>
+                        <span><strong>Conexión de ideas:</strong> Ayuda a conectar puntos entre diferentes capítulos técnicos.</span>
+                    </li>
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">🎧</span>
+                        <span><strong>Aprendizaje ubicuo:</strong> Los resúmenes en audio refuerzan la retención en momentos de descanso o traslado.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <p style="font-style: italic; color: #94a3b8; text-align: center; margin: 2rem 0;">
+                "El secreto: Pedirle a Gemini que diseñe el guion o la estructura del prompt que luego procesa NotebookLM."
+            </p>
+
+            <p style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1e293b; font-weight: 700; color: #a855f7; font-size: 1.3rem;">
+                La IA no te hace más inteligente por sí sola. Si la usas para desafiarte, se convierte en un aliado imbatible.
+            </p>
+
+            <div style="text-align: right; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1e293b;">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://leonardoalzogaray.com" 
+                   target="_blank" 
+                   style="display: inline-flex; align-items: center; gap: 10px; background: #0077b5; color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);"
+                   onmouseover="this.style.transform='scale(1.05)'"
+                   onmouseout="this.style.transform='scale(1)'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    Compartir en Linkedin
+                </a>
+            </div>
+<section id="articulo-futuro-ia" style="padding: 4rem 0; width: 100%;">
+    <div class="card-lectura-ampliada" style="max-width: 1050px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: clamp(1.5rem, 5vw, 3.5rem); border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
+        
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #10b981, #3b82f6);"></div>
+
+        <header style="margin-bottom: 3rem;">
+            <span class="tag" style="background: rgba(16, 185, 129, 0.15); color: #34d399; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase;">IA // FUTURO DEL TRABAJO</span>
+            <h2 style="font-size: clamp(2rem, 5vw, 2.8rem); margin-top: 1.5rem; color: #fff; line-height: 1.1; letter-spacing: -1px; border: none; padding: 0;">IA: ¿El fin del Analista Funcional o su Superpoder?</h2>
+        </header>
+
+        <article style="font-size: 1.15rem; color: #cbd5e1; line-height: 1.9; font-weight: 300;">
+            <p style="font-size: 1.3rem; color: #fff; margin-bottom: 2rem; font-weight: 400;">
+                Desde 1993 he visto muchas herramientas "revolucionarias", pero ninguna ha generado tanto ruido como la IA Generativa. Como analistas, la pregunta es inevitable: <strong>¿nos reemplazará?</strong>
+            </p>
+
+            <p>La respuesta, desde mi óptica en el análisis funcional, es un rotundo <strong>no</strong>. Pero con una condición: debemos aprender a pilotar la nave. La IA es excelente procesando datos, pero carece del <strong>contexto humano</strong> que solo dan los años de experiencia.</p>
+
+            <blockquote style="margin: 3.5rem 0; padding-left: 2rem; border-left: 3px solid #10b981; font-style: italic; font-size: 1.5rem; color: #fff; line-height: 1.4;">
+                "La IA nos da la velocidad, pero el Analista Funcional sigue siendo el que marca la dirección. El entender por qué un proceso debe ser de una forma para beneficiar al ciudadano sigue siendo una tarea puramente humana."
+            </blockquote>
+
+            <h3 style="color: #34d399; font-size: 1.7rem; margin-top: 3rem; border: none; padding: 0;">Nuevas herramientas, misma esencia</h3>
+            <p>Estamos integrando Copilots y agentes para optimizar procedimientos en el Ministerio. Es la evolución natural de lo que hacíamos con los disquetes en los 90, solo que ahora el lenguaje es natural:</p>
+            
+            <div style="background: rgba(15, 23, 42, 0.5); padding: 2.5rem; border-radius: 12px; border: 1px solid #1e293b; margin: 2rem 0;">
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">🎯</span>
+                        <span><strong>Prompt Engineering:</strong> Nuestra capacidad de definir requerimientos es ahora nuestra mayor ventaja para "hablar" con la IA.</span>
+                    </li>
+                    <li style="display: flex; align-items: start; gap: 15px;">
+                        <span style="font-size: 1.4rem;">⚖️</span>
+                        <span><strong>Criterio Senior:</strong> La IA puede alucinar; nuestro rol es ser el filtro final de calidad, lógica y seguridad.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <p style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1e293b; font-weight: 700; color: #10b981; font-size: 1.3rem;">
+                No le tengamos miedo al algoritmo. Cultivemos el criterio que nos trajo hasta acá.
+            </p>
+
+            <div style="text-align: right; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1e293b;">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://leonardoalzogaray.com" 
+                   target="_blank" 
+                   style="display: inline-flex; align-items: center; gap: 10px; background: #0077b5; color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);"
+                   onmouseover="this.style.transform='scale(1.05)'"
+                   onmouseout="this.style.transform='scale(1)'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    Compartir en Linkedin
+                </a>
+            </div>
         </article>
     </div>
 </section>
     </div>
-</section>
+<button id="btnVolverArriba" title="Volver al inicio">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6"/>
+    </svg>
+</button>
     <footer>
         <p>© 2026 Leonardo Alzogaray - Montevideo, Uruguay</p>
         <p>Analista Funcional Senior | Formación UCUDAL & UCU Business School</p>

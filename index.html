@@ -593,5 +593,25 @@
         ✨ Preguntale a mi IA
     </button>
 
+    <script>
+    const btnArriba = document.getElementById("btnVolverArriba");
+
+    // Mostrar el botón cuando se baja 300px
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btnArriba.style.display = "block";
+        } else {
+            btnArriba.style.display = "none";
+        }
+    };
+
+    // Al hacer clic, subir suavemente
+    btnArriba.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+</script>
 </body>
 </html>

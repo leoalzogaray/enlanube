@@ -10,7 +10,8 @@ CORS(app) # Esto evita los bloqueos que tenías en GitHub
 
 # 1. Configuración de Identidad (Extraída de Google Cloud)
 PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT")
-LOCATION = "us-central1" # O la región que elegiste en Vertex
+AGENT_ID = os.environ.get("VERTEX_AI_AGENT_ID")
+LOCATION = "us-central1" # Asegurate que sea la misma de tu consola de Google
 
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 

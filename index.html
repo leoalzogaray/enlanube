@@ -622,6 +622,30 @@
 
 
 
- 
+ <script>
+    const btnArriba = document.getElementById("btnVolverArriba");
+    let isScrolling;
+
+    window.addEventListener('scroll', () => {
+        // Limpiamos el proceso previo para que no se acumulen órdenes
+        window.clearTimeout(isScrolling);
+
+        isScrolling = setTimeout(() => {
+            if (window.pageYOffset > 500) {
+                btnArriba.style.opacity = "1";
+                btnArriba.style.visibility = "visible";
+                btnArriba.style.transform = "scale(1)";
+            } else {
+                btnArriba.style.opacity = "0";
+                btnArriba.style.visibility = "hidden";
+                btnArriba.style.transform = "scale(0.8)";
+            }
+        }, 50); // Solo ejecuta el cambio cada 50ms, no en tiempo real
+    }, { passive: true });
+
+    btnArriba.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 </body>
 </html>

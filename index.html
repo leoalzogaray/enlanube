@@ -158,6 +158,16 @@
 #btnVolverArriba svg {
     display: block;
 }
+/* Mueve el logo de reCAPTCHA un poco hacia arriba para que no tape nada */
+.grecaptcha-badge { 
+    bottom: 100px !important; /* Lo sube 100 píxeles desde el fondo */
+    opacity: 0.3;            /* Lo hace casi transparente hasta que pasás el mouse */
+    transition: opacity 0.3s;
+}
+
+.grecaptcha-badge:hover { 
+    opacity: 1; 
+}
     </style>
 </head>
 <body>

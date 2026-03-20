@@ -129,34 +129,7 @@
         #searchWidgetTrigger:hover { transform: scale(1.05); }
 
         footer { text-align: center; padding: 4rem 2rem; font-size: 0.8rem; opacity: 0.6; border-top: 1px solid #1e293b; }
-    #btnVolverArriba {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    z-index: 9999; /* Lo subimos bien arriba */
-    background-color: var(--accent);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 12px;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     
-    /* ESTO ELIMINA EL TEMBLOR */
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    will-change: opacity, transform; 
-    transform: translateZ(0); /* Fuerza aceleración por hardware */
-}
-
-#btnVolverArriba:hover {
-    background-color: var(--accent-hover);
-    transform: translateY(-5px);
-}
-
-#btnVolverArriba svg {
-    display: block;
 }
 /* Mueve el logo de reCAPTCHA un poco hacia arriba para que no tape nada */
 .grecaptcha-badge { 
@@ -285,6 +258,7 @@
             <p style="text-align: center; margin-top: 4rem; font-weight: 700; color: var(--accent); font-size: 1.3rem; letter-spacing: -0.5px;">
                 Celebrando a los Newey del mundo: los que desde 1993 saben que la mejor tecnología nace de una idea clara.
             </p>
+            
             <div style="text-align: right; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1e293b;">
     <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://leonardoalzogaray.com" 
        target="_blank" 
@@ -295,6 +269,14 @@
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
         </svg>
         Compartir en LinkedIn
+    </a>
+</div>
+<div style="text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #1e293b;">
+    <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+        Volver al inicio de la bitácora
     </a>
 </div>
         </article>
@@ -347,6 +329,14 @@
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
         </svg>
         Compartir en LinkedIn
+    </a>
+</div>
+<div style="text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #1e293b;">
+    <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+        Volver al inicio de la bitácora
     </a>
 </div>
         </article>
@@ -414,6 +404,14 @@
         Compartir en LinkedIn
     </a>
 </div>
+<div style="text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #1e293b;">
+    <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+        Volver al inicio de la bitácora
+    </a>
+</div>
         </article>
         <section id="articulo-seguridad" style="padding: 4rem 0;">
     <div class="card" style="max-width: 1050px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
@@ -470,6 +468,14 @@
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
         </svg>
         Compartir en LinkedIn
+    </a>
+</div>
+<div style="text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #1e293b;">
+    <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+        Volver al inicio de la bitácora
     </a>
 </div>
         </article>
@@ -531,6 +537,14 @@
                     Compartir en Linkedin
                 </a>
             </div>
+            <div style="text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #1e293b;">
+    <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+        Volver al inicio de la bitácora
+    </a>
+</div>
 <section id="articulo-futuro-ia" style="padding: 4rem 0; width: 100%;">
     <div class="card-lectura-ampliada" style="max-width: 1050px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; padding: clamp(1.5rem, 5vw, 3.5rem); border-radius: 24px; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden;">
         
@@ -584,6 +598,14 @@
                     Compartir en Linkedin
                 </a>
             </div>
+            <div style="text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #1e293b;">
+    <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+        Volver al inicio de la bitácora
+    </a>
+</div>
         </article>
     </div>
 </section>
@@ -632,30 +654,6 @@
 
 
 
- <script>
-    const btnArriba = document.getElementById("btnVolverArriba");
-    let isScrolling;
-
-    window.addEventListener('scroll', () => {
-        // Limpiamos el proceso previo para que no se acumulen órdenes
-        window.clearTimeout(isScrolling);
-
-        isScrolling = setTimeout(() => {
-            if (window.pageYOffset > 500) {
-                btnArriba.style.opacity = "1";
-                btnArriba.style.visibility = "visible";
-                btnArriba.style.transform = "scale(1)";
-            } else {
-                btnArriba.style.opacity = "0";
-                btnArriba.style.visibility = "hidden";
-                btnArriba.style.transform = "scale(0.8)";
-            }
-        }, 50); // Solo ejecuta el cambio cada 50ms, no en tiempo real
-    }, { passive: true });
-
-    btnArriba.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
+ 
 </body>
 </html>

@@ -585,7 +585,7 @@
         <p>Analista Funcional Senior | Formación UCUDAL & UCU Business School</p>
     </footer>
 
-    <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=es_419"></script>
+   <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=es_419"></script>
     <gen-search-widget
       configId="e758fe89-4602-43c6-a495-04d36df92a58"
       triggerId="searchWidgetTrigger">
@@ -594,6 +594,30 @@
     <button id="searchWidgetTrigger">
         ✨ Preguntale a mi IA
     </button>
+
+    <script>
+        const btnArriba = document.getElementById("btnVolverArriba");
+
+        // Usamos un listener pasivo para no estresar al navegador
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 400) {
+                btnArriba.style.opacity = "1";
+                btnArriba.style.visibility = "visible";
+            } else {
+                btnArriba.style.opacity = "0";
+                btnArriba.style.visibility = "hidden";
+            }
+        }, { passive: true });
+
+        btnArriba.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+
+
+
+
 
     <script>
     const btnArriba = document.getElementById("btnVolverArriba");

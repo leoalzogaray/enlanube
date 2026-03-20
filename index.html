@@ -130,17 +130,7 @@
 
         footer { text-align: center; padding: 4rem 2rem; font-size: 0.8rem; opacity: 0.6; border-top: 1px solid #1e293b; }
     
-}
-/* Mueve el logo de reCAPTCHA un poco hacia arriba para que no tape nada */
-.grecaptcha-badge { 
-    bottom: 100px !important; /* Lo sube 100 píxeles desde el fondo */
-    opacity: 0.3;            /* Lo hace casi transparente hasta que pasás el mouse */
-    transition: opacity 0.3s;
-}
 
-.grecaptcha-badge:hover { 
-    opacity: 1; 
-}
 /* --- LIMPIEZA TOTAL DE LA ESQUINA INFERIOR --- */
 
 /* 1. Mandamos el Captcha al rincón del olvido (Izquierda y Transparente) */
@@ -190,32 +180,45 @@ div.grecaptcha-badge:hover {
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
-
+/* --- COORDINACIÓN DE BOTONES IZQUIERDOS --- */
 #btnLibreArriba {
     position: fixed !important;
-    /* Subimos el botón a 90px para que el captcha quede cómodo abajo */
-    bottom: 90px !important; 
+    /* Subimos el botón a 100px para que el escudo de reCAPTCHA respire abajo */
+    bottom: 100px !important; 
     left: 20px !important;
     z-index: 99999 !important;
     
-    /* Mantenemos el resto del diseño */
-    width: 50px;
-    height: 50px;
-    background-color: #0f172a; /* Fondo oscuro para que resalte el borde azul */
+    /* Estética Senior */
+    width: 45px;
+    height: 45px;
+    background-color: #0f172a; 
     border: 2px solid #3b82f6;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: #3b82f6;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 #btnLibreArriba:hover {
-    background-color: var(--accent);
+    background-color: #3b82f6;
     color: white;
     transform: scale(1.1);
 }
+
+/* Hacemos que el reCAPTCHA sea un poco más discreto */
+.grecaptcha-badge {
+    opacity: 0.2 !important;
+    transition: opacity 0.3s !important;
+}
+
+.grecaptcha-badge:hover {
+    opacity: 1 !important;
+}
+
     </style>
 </head>
 <body>

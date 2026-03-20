@@ -141,6 +141,36 @@
 .grecaptcha-badge:hover { 
     opacity: 1; 
 }
+/* --- LIMPIEZA TOTAL DE LA ESQUINA INFERIOR --- */
+
+/* 1. Mandamos el Captcha al rincón del olvido (Izquierda y Transparente) */
+div.grecaptcha-badge { 
+    width: 70px !important; 
+    overflow: hidden !important; 
+    transition: all 0.3s ease !important;
+    left: 20px !important; 
+    right: auto !important; 
+    bottom: 20px !important;
+    z-index: 100 !important;
+    opacity: 0.15 !important; /* Casi invisible */
+    filter: grayscale(1);      /* Le quitamos el color para que no distraiga */
+}
+
+div.grecaptcha-badge:hover { 
+    opacity: 1 !important; 
+    filter: none;
+    width: 256px !important; /* Se expande solo si pasás el mouse */
+}
+
+/* 2. Aseguramos el Agente a la derecha y estable */
+#searchWidgetTrigger {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    z-index: 9999 !important;
+    /* Eliminamos transiciones que puedan causar vibración */
+    transition: transform 0.2s ease !important;
+}
     </style>
 </head>
 <body>

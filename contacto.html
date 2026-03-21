@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Leonardo Alzogaray</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<main class="container">
+    <section class="full-post">
+        <header class="post-header">
+            <span class="category">Canal de Comunicación</span>
+            <h1>Conectemos</h1>
+            <p>¿Tenés alguna consulta técnica o profesional? Escribime directamente.</p>
+        </header>
+
+        <hr class="separator">
+
+        <form class="contact-form" action="https://formspree.io/f/xeervyeo" method="POST">
+            
+            <div class="form-group">
+                <label for="email">Tu correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="nombre@mail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">¿En qué puedo ayudarte?</label>
+                <textarea id="message" name="message" rows="5" placeholder="Escribí tu mensaje aquí..." required></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="Nuevo contacto desde leonardoalzogaray.com">
+
+            <button type="submit" class="btn-send">Enviar Mensaje →</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

@@ -428,3 +428,48 @@ body {
         right: 0;
     }
 }
+/* --- ESTILO PARA IMÁGENES DE ANCHO COMPLETO --- */
+
+.container-full {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: 2rem;
+}
+
+.hero-image-container {
+    background-color: #000;
+    text-align: center;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.hero-image-container figcaption {
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* AJUSTE PARA MÓVILES (390px aprox) */
+@media (max-width: 480px) {
+    .container-full {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        left: 0;
+        right: 0;
+    }
+}

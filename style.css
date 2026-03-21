@@ -250,3 +250,181 @@ body {
         width: 100%; /* Botón ancho total en el celular de 390px */
     }
 }
+.highlight-box {
+    background-color: #f8f9fa;
+    border-left: 5px solid #3498db; /* Azul institucional, muy IT */
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #2c3e50;
+}
+
+.topic-section {
+    margin-bottom: 2.5rem;
+}
+
+.post-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+/* Estilos para el botón de retorno */
+.nav-regreso {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.back-link:hover {
+    border-color: #3498db; /* Un toque de azul al pasar el mouse */
+}
+/* --- ESTILOS ESPECÍFICOS PARA LA NOTA DE HEDY LAMARR --- */
+
+.tech-biography .post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Separación limpia entre párrafos y elementos */
+}
+
+/* Estilos para la Imagen Destacada */
+.featured-image {
+    margin: 1rem auto 2rem auto;
+    width: 100%;
+    max-width: 600px; /* No queremos que se coma toda la pantalla en escritorio */
+    text-align: center;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Un toque de "finesse" visual */
+    border: 1px solid #ddd;
+}
+
+.featured-image figcaption {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Tarjeta Técnica (Un tablero de datos técnicos) */
+.tech-spec-card {
+    background-color: #ecf0f1; /* Gris muy suave, como un manual técnico */
+    border: 1px solid #bdc3c7;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+    border-left: 5px solid var(--primary-color); /* Identidad de ingeniería */
+}
+
+.tech-spec-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.tech-spec-card ul {
+    list-style: none; /* Quitamos las viñetas por defecto */
+    margin: 0;
+    padding: 0;
+}
+
+.tech-spec-card li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.tech-spec-card strong {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Cita Destacada */
+.pull-quote {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Fuente más clásica y elegante */
+    font-size: 1.4rem;
+    color: #2c3e50;
+    font-style: italic;
+    text-align: center;
+    max-width: 70%;
+    margin: 3rem auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Ajuste Móvil (390px) */
+@media (max-width: 480px) {
+    .pull-quote {
+        font-size: 1.1rem;
+        max-width: 90%;
+        margin: 2rem auto;
+    }
+    .tech-spec-card {
+        padding: 1rem;
+    }
+}
+/* --- ESTILO PARA IMÁGENES DE ANCHO COMPLETO --- */
+
+.container-full {
+    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw; /* Centrado técnico para romper el contenedor */
+    margin-right: -50vw;
+    margin-bottom: 2rem;
+}
+
+.hero-image-container {
+    background-color: #000; /* Fondo negro para que resalte la imagen en escritorio */
+    text-align: center;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 1600px; /* Evitamos que se pixele en pantallas gigantes */
+    margin: 0 auto;
+}
+
+.hero-image-container figcaption {
+    background-color: rgba(0,0,0,0.7); /* Fondo traslúcido para legibilidad */
+    color: #fff;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.icon-camera {
+    margin-right: 5px;
+}
+
+/* AJUSTE PARA MÓVILES (390px aprox) */
+@media (max-width: 480px) {
+    .container-full {
+        width: 100%; /* En móvil, no rompemos el contenedor, solo lo ajustamos */
+        margin-left: 0;
+        margin-right: 0;
+        left: 0;
+        right: 0;
+    }
+}

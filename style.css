@@ -491,3 +491,17 @@ body {
     border-radius: 8px;
     margin: 2rem 0;
 }
+.legacy-quote {
+    border-left: 5px solid #f1c40f; /* Un dorado que denote calidad y valor */
+    background-color: #fffdf0;
+    font-style: italic;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.highlight-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+}

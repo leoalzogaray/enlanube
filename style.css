@@ -538,3 +538,11 @@ footer p:first-of-type {
     padding-top: 15px;
     border-top: 1px solid #eaeaea; /* Opcional: una línea muy finita y sutil para separar */
 }
+/* 2. Le da espacio a la "Nota" para separarla del Copyright y la centra */
+footer p:first-of-type {
+    margin: 0 auto 20px auto; /* 'auto' a los lados centra el bloque, 20px mantiene la separación abajo */
+    line-height: 1.6; /* Hace que las dos líneas de la nota respiren mejor */
+    font-size: 0.95rem;
+    text-align: center; /* Centra el texto internamente */
+    max-width: 850px; /* Contiene el ancho para facilitar la lectura */
+}

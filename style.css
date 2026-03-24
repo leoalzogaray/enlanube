@@ -516,3 +516,25 @@ body {
     color: #3498db; /* Azul institucional al pasar el mouse */
     text-decoration: underline;
 }
+/* --- Ajustes del Footer --- */
+
+/* 1. Aleja todo el bloque del footer de las cards de arriba */
+footer {
+    margin-top: 60px; 
+    padding-bottom: 40px; /* Da un margen final antes del borde de la pantalla */
+    color: #555; /* Un gris oscuro para que no compita con el texto principal */
+}
+
+/* 2. Le da espacio a la "Nota" para separarla del Copyright */
+footer p:first-of-type {
+    margin-bottom: 20px; /* Separa la nota legal de los links de abajo */
+    line-height: 1.6; /* Hace que las dos líneas de la nota respiren mejor */
+    font-size: 0.95rem;
+}
+
+/* 3. Asegura que los enlaces del menú inferior tengan su espacio */
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eaeaea; /* Opcional: una línea muy finita y sutil para separar */
+}

@@ -2,8 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://leonardoalzogaray.com/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://leonardoalzogaray.com/notas/hosting-2026.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leonardoalzogaray.com/notas/hedylamarr.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leonardoalzogaray.com/notas/hormigon.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leonardoalzogaray.com/notas/ia-rag-web.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leonardoalzogaray.com/notas/iaanalisis.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leonardoalzogaray.com/notas/iaestudio.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leonardoalzogaray.com/notas/newey.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leonardoalzogaray.com/notas/seguridad.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://leonardoalzogaray.com/contacto.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://leonardoalzogaray.com/ia-asistente.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>

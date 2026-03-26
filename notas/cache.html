@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Por qué tu navegador muestra un sitio caído cuando los servidores están en verde? Entendiendo la memoria caché y la ilusión del tiempo real en la web.">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leonardoalzogaray.com/cache.html">
+    <meta property="og:title" content="¿El sistema está caído o tu navegador vive en el pasado? La trampa de la caché">
+    <meta property="og:description" content="¿Por qué tu navegador muestra un sitio caído cuando los servidores están en verde? Entendiendo la memoria caché y la ilusión del tiempo real en la web.">
+    <meta property="og:image" content="https://leonardoalzogaray.com/notas/ilusion-cache.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://leonardoalzogaray.com/cache.html">
+    <meta name="twitter:title" content="¿El sistema está caído o tu navegador vive en el pasado? La trampa de la caché">
+    <meta name="twitter:description" content="¿Por qué tu navegador muestra un sitio caído cuando los servidores están en verde? Entendiendo la memoria caché y la ilusión del tiempo real en la web.">
+    <meta name="twitter:image" content="https://leonardoalzogaray.com/notas/ilusion-cache.jpg">
+    <title>La ilusión del tiempo real (o por qué tu navegador vive en el pasado) | Leonardo Alzogaray</title>
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="notas-page"> 
+    
+    <header class="main-header" style="padding: 1.5rem 0; margin-bottom: 20px;">
+        <nav class="container">
+            <a href="../index.html" style="color: white; text-decoration: none; font-weight: bold;">
+                ← Leonardo Alzogaray | Bitácora
+            </a>
+        </nav>
+    </header>
+
+    <main class="main-wrapper container">
+        
+        <article class="full-post tech-strategy" style="background-color: white; max-width: 900px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px;">
+            
+            <header class="post-header">
+                <span class="category">Reflexiones de Trinchera & Soporte</span>
+                <h1>La ilusión del tiempo real (o por qué tu navegador vive en el pasado)</h1>
+                <p class="post-meta">Publicado: Marzo de 2026 | Por Leonardo Alzogaray</p>
+            </header>
+
+            <img src="ilusion-cache.png" 
+                 alt="Representación abstracta de relojes y un pc, ilustrando la brecha de tiempo de la memoria caché" 
+                 class="post-featured-image"
+                 style="max-width: 100%; height: auto; display: block; margin: 0 auto 20px auto;">
+            
+            <hr class="separator">
+
+            <div class="post-read-width-container" style="max-width: 720px; margin: 0 auto;">
+                
+                <section class="post-content">
+                    
+                    <p class="intro-text">
+                        Imagínate esta escena, clásica en cualquier gran organización: Viernes a la noche, el equipo de infraestructura hace un pase a producción crítico. El domingo los servidores levantan impecables y todos los indicadores están en verde. El despliegue fue un éxito.
+                    </p>
+                    <p>
+                        Sin embargo, el lunes a las 8:00 AM, la Mesa de Ayuda colapsa. Decenas de tickets entran con el mismo mensaje: <em>"El sistema está caído"</em>. El usuario adjunta una captura de pantalla y ahí está, inconfundible: el viejo y temido cartel de Servidores en Mantenimiento.
+                    </p>
+                    <p>
+                        ¿Se cayó el servidor? No. Lo que se cayó fue el presente. El usuario está atrapado en el viernes a la noche por culpa de un guardián silencioso y eficiente: <strong>la memoria caché</strong>.
+                    </p>
+                    <div style="height: 2.5rem;"></div>
+                    <section class="topic-section">
+                        <h3>⏱️ La tiranía de la eficiencia</h3>
+                        <p>
+                            Cuando abrimos una página web, juramos que estamos viendo el "ahora" absoluto. Creemos que nuestra pantalla es una ventana directa al servidor. Pero en la arquitectura web, la inmediatez tiene un costo altísimo en procesamiento y ancho de banda. Para evitar esto, los navegadores (Chrome, Edge, Safari) actúan como acumuladores compulsivos.
+                        </p>
+                        <p>
+                            Para que la web parezca rápida, tu computadora guarda copias de textos, imágenes y estilos en su disco duro. Es el equivalente a tener una fotocopia de un formulario en tu escritorio para no tener que bajar al archivo general cada vez que lo necesitás. Es un sistema brillante y eficiente... hasta que el formulario oficial cambia.
+                        </p>
+                    </section>
+
+                    <section class="topic-section">
+                        <h3>⚡ El choque de realidades</h3>
+                        <p>
+                            Acá es donde se genera la brecha entre el usuario y el sistema. Desde el lado del desarrollo, subimos una nueva versión a producción —un rediseño, un nuevo protocolo de seguridad, o un asistente de Inteligencia Artificial alimentado con nuevos datos—. Los monitores marcan que la nueva realidad ya está en línea.
+                        </p>
+                        <p>
+                            Pero del otro lado de la pantalla, el navegador del usuario hace trampa. Antes de ir a preguntarle a Internet cómo está el sitio hoy, revisa su cajón de fotocopias. Si encuentra la versión del viernes, te la muestra en milisegundos. El sistema avanzó, pero el navegador se niega a soltar el pasado.
+                        </p>
+                    </section>
+
+                    <section class="topic-section highlight-box">
+                        <h3>🕵️‍♂️ El "suero de la verdad" (El Modo Incógnito)</h3>
+                        <p>
+                            Por eso, en más de 30 años de carrera en IT, la frase <em>"probá en una ventana de incógnito"</em> sigue siendo la herramienta de diagnóstico número uno del Nivel 1 de soporte.
+                        </p>
+                        <p>
+                            La cultura popular cree que el modo incógnito es una capa de invisibilidad para esconderse de los hackers, pero en realidad, su mayor utilidad es ser una amnesia provocada. Al abrir esa ventana oscura, obligamos a la máquina a olvidar todo lo que sabe, a tirar a la basura las fotocopias viejas y a ir a preguntarle al servidor central: <strong>"¿Qué está pasando ahora, en este exacto milisegundo?"</strong>.
+                        </p>
+                    </section>
+
+                    <section class="conclusion-section">
+                        <blockquote class="pull-quote legacy-quote">
+                            "En un mundo digital obsesionado con la inmediatez, resulta paradójico que muchas veces estemos mirando fotos viejas. Entender cómo funciona la caché no es solo un capricho técnico; es comprender que en la web, al igual que en la vida, a veces la única forma de ver el presente real es animándonos a borrar nuestra propia memoria."
+                        </blockquote>
+                    </section>
+                    
+                </section>
+            </div> 
+        </article>
+    </main>
+
+    <footer class="post-footer container">
+        <hr class="separator">
+        <div class="author-box">
+            <div class="author-info">
+                <h3>Leonardo Alzogaray</h3>
+                <p>Analista Funcional Senior | Gestión & Metodologías Ágiles</p>
+                <p class="location">Montevideo, Uruguay</p>
+            </div>
+            <div class="author-links">
+                <a href="https://www.linkedin.com/in/leonardoalzogaray/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="../contacto.html">Contacto Directo</a>
+                <a href="../index.html">Bitácora Principal</a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 | IT y Gestión con Pasión.</p>
+    </footer>
+
+</body>
+</html>

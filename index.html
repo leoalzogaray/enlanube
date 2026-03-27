@@ -104,24 +104,23 @@
 
     <script src="script.js"></script>
 
- <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
 <df-messenger
   project-id="bitacora-leo-2026"
   agent-id="ef1d31ef-de30-488f-a232-803629c7db2f"
-  language-code="es">
+  language-code="es-419"
+  max-query-length="-1">
   <df-messenger-chat-bubble
-   chat-title="Asistente">
+    chat-title="Asistente">
   </df-messenger-chat-bubble>
 </df-messenger>
-
 <style>
   df-messenger {
     z-index: 999;
     position: fixed;
     --df-messenger-font-color: #000;
-    --df-messenger-font-family: Google Sans, sans-serif;
+    --df-messenger-font-family: Google Sans;
     --df-messenger-chat-background: #f3f6fc;
     --df-messenger-message-user-background: #d3e3fd;
     --df-messenger-message-bot-background: #fff;
